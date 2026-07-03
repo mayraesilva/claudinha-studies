@@ -4,23 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Pacote Python `members-csv-claude-fcc` para leitura e processamento de arquivos CSV com dados de membros. Projeto de estudos baseado no curso Python for Beginners da freeCodeCamp.
+Python package `members-csv-claude-fcc` for reading and processing CSV files with member data. Study project based on the Python for Beginners course from freeCodeCamp.
 
 ## Environment
 
-- Python 3.14.4 via `.venv` local
-- Sem dependências externas (usa apenas biblioteca padrão)
+- Python 3.14.4 via local `.venv`
+- No external dependencies (standard library only)
 
 ## Commands
 
 ```powershell
-# Ativar ambiente virtual
+# Activate virtual environment
 .venv\Scripts\Activate.ps1
 
-# Instalar o pacote em modo editável (necessário para importar/usar a CLI)
+# Install package in editable mode (required to import or use the CLI)
 pip install -e .
 
-# Usar a CLI após instalação
+# Use the CLI after installation
 members-csv members.csv
 ```
 
@@ -28,16 +28,16 @@ members-csv members.csv
 
 ```
 src/members_csv_claude_fcc/
-    __init__.py   — exporta read_members e get_full_names
-    reader.py     — funções principais com type hints e docstrings
-    cli.py        — entry point da CLI (members-csv <filepath>)
-pyproject.toml    — metadados do pacote e entry point
-members.csv       — arquivo de dados de exemplo (1.000 registros)
+    __init__.py   — exports read_members and get_full_names
+    reader.py     — core functions with type hints and docstrings
+    cli.py        — CLI entry point (members-csv <filepath>)
+pyproject.toml    — package metadata and entry point
+members.csv       — sample data file (1,000 records)
 ```
 
 ## Package API
 
-- `read_members(filepath)` → `list[dict]` — lê qualquer CSV e retorna todas as linhas
-- `get_full_names(filepath)` → `list[str]` — retorna `"first_name last_name"` de cada linha
+- `read_members(filepath)` → `list[dict]` — reads any CSV and returns all rows
+- `get_full_names(filepath)` → `list[str]` — returns `"first_name last_name"` for each row
 
-Ambas aceitam `str` ou `pathlib.Path`. Esperam CSV UTF-8 com linha de cabeçalho.
+Both accept `str` or `pathlib.Path`. Expect UTF-8 CSV with a header row.
