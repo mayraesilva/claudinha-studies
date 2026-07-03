@@ -26,4 +26,7 @@ def get_full_names(filepath: str | Path) -> list[str]:
     Returns:
         List of strings in the format ``"first_name last_name"``.
     """
-    return [f"{row['first_name']} {row['last_name']}" for row in read_members(filepath)]
+    return [
+        f"{row['first_name']} {row['last_name']}"
+        for row in read_members(filepath)
+    ]
