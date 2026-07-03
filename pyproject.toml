@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "members-csv-claude-fcc"
+version = "0.1.0"
+description = "Reads and processes CSV files with member data (first_name, last_name)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mayra Silva", email = "mayra.silva@akross.com.br" }]
+
+[project.urls]
+Repository = "https://github.com/mayraesilva/claudinha-studies"
+
+[project.scripts]
+members-csv = "members_csv_claude_fcc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
